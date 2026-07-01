@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+  "version": 1,
+  "type": "APP",
+  "name": {
+    "en": "Command Palette",
+    "ja": "コマンドパレット"
+  },
+  "description": {
+    "en": "Press Ctrl+K to open a palette that searches apps, views, records, and actions and jumps to them with the keyboard. No external transmission.",
+    "ja": "Ctrl+K でアプリ・ビュー・レコード・アクションを検索し、キーボードだけで移動できるパレットを開きます。外部送信はありません。"
+  },
+  "icon": "icon.png",
+  "homepage_url": {
+    "en": "https://github.com/kojimiyazawa/kintone-command-palette",
+    "ja": "https://github.com/kojimiyazawa/kintone-command-palette"
+  },
+  "desktop": {
+    "js": ["desktop.js"],
+    "css": []
+  },
+  "config": {
+    "html": "config.html",
+    "js": ["config.js"],
+    "css": [],
+    "required_params": []
+  }
+}
