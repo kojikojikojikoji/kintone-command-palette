@@ -104,6 +104,10 @@ a development environment with connection details from environment variables.
 ## TODO
 
 - Match highlighting inside candidate rows is not implemented (FR-3 defers it).
+- Record search does not yet degrade when a configured field is deleted or its
+  type changes (EC-9, EC-10). It currently shows a generic search error instead
+  of dropping the missing field and continuing. See the TODO in
+  `src/desktop/palette.ts`.
 - E2E specs (`test/e2e`) are written but need a prepared kintone app to run.
 - The plugin icon in `plugin/icon.png` is generated from `plugin/icon.svg`; swap
   in a final rendering before release if a rasterizer is not available at build

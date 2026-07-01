@@ -351,6 +351,11 @@ export class Palette {
     location.href = candidate.url;
   }
 
+  // TODO(spec EC-9/EC-10): when a configured field is deleted or changes type,
+  // kintone rejects the query for the unknown field and this shows the generic
+  // "search failed" row. The spec asks to instead drop the missing field and
+  // continue (EC-9), or disable the record source with a one-time admin notice
+  // when all fields are gone (EC-10). Detect the field error and adjust.
   private scheduleRecordSearch(): void {
     if (this.recordTimer) {
       clearTimeout(this.recordTimer);
