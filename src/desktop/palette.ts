@@ -361,6 +361,10 @@ export class Palette {
       clearTimeout(this.recordTimer);
       this.recordTimer = null;
     }
+    // Invalidate any in-flight request right away. Bumping only when the next
+    // request starts would let a stale response land during the debounce
+    // window and overwrite the newer query's view (EC-13).
+    this.recordSeq += 1;
     if (!this.enabled.records || this.query.trim() === "") {
       this.recordHits = [];
       this.recordsSearching = false;
