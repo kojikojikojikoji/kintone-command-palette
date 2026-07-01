@@ -1,5 +1,7 @@
 # kintone-command-palette
 
+Documentation in Japanese: [README.ja.md](./README.ja.md)
+
 Press Ctrl+K (Cmd+K on macOS) on a kintone app screen to open a search box that
 finds apps, views, records, and actions as you type, and jump to the selected
 one with Enter. It works like the command palette in Linear or VS Code. Moving
