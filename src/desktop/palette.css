@@ -1,0 +1,128 @@
+/* Command palette overlay injected on record screens. All class names use the
+   kp-cmdp- prefix to avoid collisions with kintone and other plugins. */
+
+.kp-cmdp-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 10000;
+  display: none;
+}
+
+.kp-cmdp-overlay.kp-cmdp-open {
+  display: block;
+}
+
+.kp-cmdp-panel {
+  position: absolute;
+  top: 15vh;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 560px;
+  max-width: 90vw;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Yu Gothic UI",
+    "Yu Gothic", Meiryo, sans-serif;
+  color: #1f2933;
+  overflow: hidden;
+}
+
+.kp-cmdp-search {
+  display: flex;
+  align-items: center;
+  height: 44px;
+  padding: 0 12px;
+  border-bottom: 1px solid #d5dbe1;
+}
+
+.kp-cmdp-search__icon {
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  flex: none;
+  color: #5f6b7a;
+}
+
+.kp-cmdp-search__input {
+  flex: 1;
+  height: 100%;
+  border: 0;
+  outline: none;
+  font-size: 15px;
+  color: #1f2933;
+  background: transparent;
+}
+
+.kp-cmdp-filter {
+  padding: 4px 12px;
+  font-size: 12px;
+  color: #5f6b7a;
+  border-bottom: 1px solid #eef0f3;
+}
+
+.kp-cmdp-list {
+  max-height: 400px;
+  overflow-y: auto;
+  margin: 0;
+  padding: 4px 0;
+  list-style: none;
+}
+
+.kp-cmdp-group {
+  font-size: 12px;
+  color: #5f6b7a;
+  padding: 8px 12px 4px;
+}
+
+.kp-cmdp-option {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 44px;
+  padding: 0 12px;
+  cursor: pointer;
+}
+
+.kp-cmdp-option.kp-cmdp-selected {
+  background: #eef4fa;
+}
+
+.kp-cmdp-option__label {
+  font-size: 14px;
+  color: #1f2933;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.kp-cmdp-option__sub {
+  font-size: 12px;
+  color: #5f6b7a;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.kp-cmdp-empty,
+.kp-cmdp-hint {
+  font-size: 13px;
+  color: #5f6b7a;
+  padding: 12px;
+}
+
+.kp-cmdp-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 32px;
+  padding: 0 12px;
+  border-top: 1px solid #d5dbe1;
+  font-size: 12px;
+  color: #5f6b7a;
+}
+
+.kp-cmdp-footer__note {
+  color: #b3261e;
+}

@@ -1,0 +1,170 @@
+:root {
+  --kp-text: #1f2933;
+  --kp-text-sub: #5f6b7a;
+  --kp-bg: #ffffff;
+  --kp-bg-section: #f7f8fa;
+  --kp-border: #d5dbe1;
+  --kp-primary: #0f6db3;
+  --kp-primary-hover: #0b578f;
+  --kp-danger: #b3261e;
+  --kp-focus: #0f6db3;
+  --kp-radius: 6px;
+  --kp-space: 8px;
+  --kp-font: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Yu Gothic UI",
+    "Yu Gothic", Meiryo, sans-serif;
+}
+
+.kp-cmdp-config {
+  font-family: var(--kp-font);
+  color: var(--kp-text);
+  background: var(--kp-bg-section);
+  margin: 0;
+  padding: 24px;
+}
+
+.kp-cmdp-config__inner {
+  max-width: 800px;
+  margin: 0;
+  padding-bottom: 72px;
+}
+
+.kp-cmdp-config h1 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 0 4px;
+}
+
+.kp-cmdp-config__lead {
+  font-size: 13px;
+  color: var(--kp-text-sub);
+  margin: 0 0 16px;
+}
+
+.kp-cmdp-card {
+  background: var(--kp-bg);
+  border: 1px solid var(--kp-border);
+  border-radius: var(--kp-radius);
+  padding: 24px;
+  margin-bottom: 16px;
+}
+
+.kp-cmdp-card__title {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0 0 12px;
+}
+
+.kp-cmdp-field {
+  margin-bottom: 16px;
+}
+
+.kp-cmdp-field:last-child {
+  margin-bottom: 0;
+}
+
+.kp-cmdp-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.kp-cmdp-desc {
+  font-size: 12px;
+  color: var(--kp-text-sub);
+  margin: 4px 0 8px;
+}
+
+.kp-cmdp-radio,
+.kp-cmdp-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.kp-cmdp-radio input,
+.kp-cmdp-check input {
+  margin-top: 3px;
+}
+
+.kp-cmdp-radio__body,
+.kp-cmdp-check__body {
+  display: flex;
+  flex-direction: column;
+}
+
+.kp-cmdp-radio__desc {
+  font-size: 12px;
+  color: var(--kp-text-sub);
+}
+
+.kp-cmdp-selects {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.kp-cmdp-select {
+  min-width: 180px;
+  height: 34px;
+  border: 1px solid var(--kp-border);
+  border-radius: var(--kp-radius);
+  padding: 0 8px;
+  font-size: 14px;
+  color: var(--kp-text);
+  background: var(--kp-bg);
+}
+
+.kp-cmdp-select:focus {
+  outline: 2px solid var(--kp-focus);
+  outline-offset: 2px;
+}
+
+.kp-cmdp-error {
+  color: var(--kp-danger);
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.kp-cmdp-bar {
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  align-items: center;
+  padding: 12px 24px;
+  background: var(--kp-bg);
+  border-top: 1px solid var(--kp-border);
+}
+
+.kp-cmdp-btn-primary {
+  background: var(--kp-primary);
+  color: #ffffff;
+  border: 0;
+  border-radius: var(--kp-radius);
+  padding: 8px 20px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.kp-cmdp-btn-primary:hover {
+  background: var(--kp-primary-hover);
+}
+
+.kp-cmdp-btn-text {
+  background: transparent;
+  color: var(--kp-text-sub);
+  border: 0;
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.kp-cmdp-btn-primary:focus,
+.kp-cmdp-btn-text:focus {
+  outline: 2px solid var(--kp-focus);
+  outline-offset: 2px;
+}
